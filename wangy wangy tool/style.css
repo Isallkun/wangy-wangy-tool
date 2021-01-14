@@ -4,7 +4,7 @@
     font-family: 'Noto Sans KR', sans-serif;
 }
 
-nav { 
+nav {
     background-color: #09090a ;
     display: flex ;
     font-size: 20px ;
@@ -25,11 +25,11 @@ nav {
     text-align: center ;
 }
 
-.penjelasan h1 { 
+.penjelasan h1 {
     margin: 10px auto ;
 }
 
-.kotak-input { 
+.kotak-input {
     display: flex ;
     flex-direction: column ;
     margin: 10px ;
@@ -41,33 +41,45 @@ nav {
     margin: 10px 0 ;
 }
 
-.kotak-input input { 
-    width: 350px ;
+.kotak-input input {
+    width: 30%;
     height: 25px ;
     text-align: center ;
     font-size: 18px ;
+    border: 1px solid #000;
 }
 
-.kotak-input button { 
+.kotak-input button {
     color: #FFFFFF ;
     background-color: red ;
-    width: 150px ;
+    width: calc(25% - 4px);
     height: 40px ;
     margin-top: 10px ;
     border: none ;
     cursor: pointer;
-    transition: 0.5s ;
+    transition: 0.3s ;
+    font-size: 16px;
+}
+
+.type-selected {
+  background: rgb(86, 108, 115) !important;
+}
+
+#btnAddName {
+  width: 30%;
 }
 
 .kotak-input button:hover {
-    background-color: rgb(202, 5, 5) ;
+  background-color: rgb(86, 108, 115) ;
+  color: #fff;
 }
+
 
 #p {
-    margin-top : 10px ;
+  margin: 10px 0 0;
 }
 
-.pilih-template { 
+.pilih-template {
     margin: 10px 0 ;
 }
 .pilih-template button {
@@ -86,7 +98,7 @@ nav {
     margin: auto ;
 }
 
-#hasil { 
+#hasil {
     margin : 20px auto ;
     width: 680px ;
     height: 200px ;
@@ -104,10 +116,10 @@ nav {
     margin-top: 10px ;
     border: none ;
     cursor: pointer;
-    transition: 0.5s ;
+    transition: 0.3s ;
 }
 
-footer { 
+footer {
     display: flex ;
     font-size: 14px ;
     text-align : center ;
@@ -123,14 +135,17 @@ footer p {
 
 
 @media only screen and (max-width : 600px ){
-    nav { 
+  #p {
+    margin: 10px 10px 0;
+  }
+    nav {
         font-size: 14px ;
         justify-content: space-between ;
         padding: 10px ;
         text-transform: uppercase ;
     }
 
-    nav h1 { 
+    nav h1 {
         margin: auto ;
     }
 
@@ -155,13 +170,14 @@ footer p {
     }
 
     .kotak-input input {
-        width: 300px ;
+        width: calc(100% - 20px);
         padding: 0 ;
-        margin: 10px ;
+        margin: 0 auto 10px;
     }
 
     .kotak-input button {
-        margin-left: 10px ;
+        width: calc(100% - 20px);
+        margin: 5px 10px;
     }
 
     .pilih-template p {
